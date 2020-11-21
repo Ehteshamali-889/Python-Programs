@@ -1,0 +1,52 @@
+#n3 is last digit in reverse number
+#n2 is second last digit in reverse number
+#n1 is first digit in reverse number
+#zfill is used to add leading zeros to reverse of number
+print("3 digit reverse")
+#number to be uncommented to check output
+#n=999
+n=200
+#n=290
+#n=209
+last=False
+second=False
+n3=n//100
+print("first digit")
+print(n3)
+if (n//10)%10==0:
+    second=True
+    n2=0
+    print("in true of second")
+    print("second digit")
+    print(n2)
+else:
+    n2=(n//10)%10
+    print("in false of second")
+    print("second digit")
+    print(n2)
+if n%10==0:
+    last=True
+    n1=0
+    print("in true")
+    print("third digit")
+    print(n1)
+else:
+    n1=n%10
+    print("in false")
+    print("third digit")
+    print(n1)
+if (last==True) and (second==True):
+    print("both")
+    number=str(n3)
+    number=number.zfill(3)
+elif last==True:
+    print("last")
+    number=str(n2)+str(n3)
+    number=number.zfill(3)
+elif second==True:
+    print("second")
+    number=str(n1)+"0"+str(n3)
+else:
+    number=n1*100+n2*10+n3
+print("Input number is:",n)
+print("Reverse of number:",number)
